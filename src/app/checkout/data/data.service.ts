@@ -4,21 +4,20 @@ import { Observable, BehaviorSubject, ReplaySubject } from 'rxjs';
 import { CoverageTypeResponse } from './interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  
   private jsonUrl = '/response.json';
-  //private formData: any = {};
   private formDataSubject: ReplaySubject<any>;
 
-  //constructor(private http: HttpClient) {}
   constructor(private http: HttpClient) {
-    const storedFormData = JSON.parse(localStorage.getItem('formData') as string);
+    const storedFormData = JSON.parse(
+      localStorage.getItem('formData') as string
+    );
     this.formDataSubject = new ReplaySubject<any>(storedFormData || {});
   }
 
-  getData(){
+  getData() {
     return this.http.get<CoverageTypeResponse>(this.jsonUrl);
   }
 
@@ -27,12 +26,7 @@ export class DataService {
     localStorage.setItem('formData', JSON.stringify(data));
   }
 
-  /*getFormData() {
-    //return this.formData;
-    return JSON.parse(localStorage.getItem('formData') as string);
-  }*/
-
-    getFormData(): Observable<any> {
-      return this.formDataSubject.asObservable();
-    }
+  getFormData(): Observable<any> {
+    return this.formDataSubject.asObservable();
+  }
 }

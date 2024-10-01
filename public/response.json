@@ -1,0 +1,226 @@
+{
+  "data": {
+    "product_identifier": "third_party_liability_plus",
+    "premium": {
+      "annual_plan": {
+        "receipt_amount": 363.96,
+        "annual_gross_premium": 363.96,
+        "annual_net_premium": 323.93,
+        "annual_taxes": 40.04,
+        "first_receipt_amount": 363.96,
+        "annual_discounted_gross_premium": null,
+        "annual_discounted_net_premium": null,
+        "annual_discounted_taxes": null
+      },
+      "monthly_plan": null,
+      "biannual_plan": null,
+      "quarterly_plan": null
+    },
+    "coverage_types": [
+      {
+        "title": {
+          "en": "Third party liability and Driver Damages",
+          "es": "Responsabilidad Civil y Daños del conductor"
+        },
+        "description": {
+          "en": "The mandatory coverage to be able to drive your car. You are covered of the mandatory and voluntary third party liability, damages to a third person and legal defense. It includes indemnization in case of driver damages and the medical expenses cost.",
+          "es": "La cobertura legalmente obligatoria para circular. Cubre la RC obligatoria y voluntaria por los daños causados a un tercero y la protección legal. También cubre indemnización en caso de daños al conductor por accidente y cubre los gastos médicos asociados."
+        },
+        "selected": true,
+        "identifier": "third_party_liability",
+        "premium": {
+          "monthly_plan": null,
+          "annual_plan": {
+            "receipt_amount": 272.52,
+            "first_receipt_amount": null,
+            "annual_gross_premium": 272.52,
+            "annual_net_premium": 245.17,
+            "annual_taxes": 27.35,
+            "annual_discounted_gross_premium": null,
+            "annual_discounted_net_premium": null,
+            "annual_discounted_taxes": null
+          },
+          "biannual_plan": null,
+          "quarterly_plan": null
+        },
+        "order": 1
+      },
+      {
+        "title": {
+          "en": "Roadside assistance",
+          "es": "Asistencia en carretera"
+        },
+        "description": {
+          "en": "Roadside assistance and towing services. Maximum protection for you and your motorcycle in the event of an accident or breakdown. It also includes specific coverage in case of a trip abroad. Subject to a 15-day waiting period.",
+          "es": "Ayuda técnica en carretera y remolcaje. Máxima protección para ti y para tu moto en caso de sufrir un accidente o avería. También incluye coberturas específicas en caso de viaje al extranjero. Sujeta a carencia de 15 días."
+        },
+        "selected": true,
+        "identifier": "roadside_assistance",
+        "premium": {
+          "monthly_plan": null,
+          "annual_plan": {
+            "receipt_amount": 49.01,
+            "first_receipt_amount": null,
+            "annual_gross_premium": 49.01,
+            "annual_net_premium": 40.5,
+            "annual_taxes": 8.51,
+            "annual_discounted_gross_premium": null,
+            "annual_discounted_net_premium": null,
+            "annual_discounted_taxes": null
+          },
+          "biannual_plan": null,
+          "quarterly_plan": null
+        },
+        "order": 2
+      },
+      {
+        "title": {
+          "en": "Replacement vehicle",
+          "es": "Vehículo de sustitución"
+        },
+        "description": {
+          "en": "In the event that due to an accident your car is disabled, Cleverea will provide you with one.",
+          "es": "En caso de que debido a un accidente tu coche quede inutilizado, Cleverea te proporcionará uno."
+        },
+        "selected": false,
+        "identifier": "replacement_vehicle",
+        "premium": {
+          "monthly_plan": null,
+          "annual_plan": {
+            "receipt_amount": 33.88,
+            "first_receipt_amount": null,
+            "annual_gross_premium": 33.88,
+            "annual_net_premium": 28.0,
+            "annual_taxes": 5.88,
+            "annual_discounted_gross_premium": null,
+            "annual_discounted_net_premium": null,
+            "annual_discounted_taxes": null
+          },
+          "biannual_plan": null,
+          "quarterly_plan": null
+        },
+        "order": 3
+      },
+      {
+        "title": {
+          "en": "Policy cancellation",
+          "es": "Cancelación de póliza"
+        },
+        "description": {
+          "en": "Cancel at any time after the minimum contract period and receive a proportional refund for the unused portion.",
+          "es": "Cancela cuando quieras a partir del periodo de permanencia y recupera la parte proporcional no disfrutada."
+        },
+        "selected": true,
+        "identifier": "cancellation_service",
+        "premium": {
+          "monthly_plan": null,
+          "annual_plan": {
+            "receipt_amount": 9.99,
+            "first_receipt_amount": null,
+            "annual_gross_premium": 9.99,
+            "annual_net_premium": 8.26,
+            "annual_taxes": 1.73,
+            "annual_discounted_gross_premium": null,
+            "annual_discounted_net_premium": null,
+            "annual_discounted_taxes": null
+          },
+          "biannual_plan": null,
+          "quarterly_plan": null
+        },
+        "order": 4
+      },
+      {
+        "title": {
+          "en": "Fire and windscreen",
+          "es": "Incendio y lunas"
+        },
+        "description": {
+          "en": "Covers the damage as a result of fire or broken windows.",
+          "es": "Cubre los daños como consecuencia de incendio o rotura de lunas."
+        },
+        "selected": true,
+        "identifier": "fire_windscreen",
+        "premium": {
+          "monthly_plan": null,
+          "annual_plan": {
+            "receipt_amount": 23.79,
+            "first_receipt_amount": null,
+            "annual_gross_premium": 23.79,
+            "annual_net_premium": 22.0,
+            "annual_taxes": 1.79,
+            "annual_discounted_gross_premium": null,
+            "annual_discounted_net_premium": null,
+            "annual_discounted_taxes": null
+          },
+          "biannual_plan": null,
+          "quarterly_plan": null
+        },
+        "order": 5
+      },
+      {
+        "title": {
+          "en": "Theft",
+          "es": "Robo"
+        },
+        "description": {
+          "en": "Covers total or partial car theft.",
+          "es": "Cubre el robo total o parcial del coche."
+        },
+        "selected": true,
+        "identifier": "theft",
+        "premium": {
+          "monthly_plan": null,
+          "annual_plan": {
+            "receipt_amount": 8.65,
+            "first_receipt_amount": null,
+            "annual_gross_premium": 8.65,
+            "annual_net_premium": 8.0,
+            "annual_taxes": 0.65,
+            "annual_discounted_gross_premium": null,
+            "annual_discounted_net_premium": null,
+            "annual_discounted_taxes": null
+          },
+          "biannual_plan": null,
+          "quarterly_plan": null
+        },
+        "order": 6
+      },
+      {
+        "title": {
+          "en": "Wildlife collision",
+          "es": "Colisión con animales"
+        },
+        "description": {
+          "en": "Damage suffered by the insured vehicle due to impact, collision or run over with hunting species (game animals) and domestic animals (from livestock exploitations, farms or similar)",
+          "es": "Los daños que sufra el vehículo asegurado por impacto, colisión o atropello con especies cinegéticas (animales de caza) y animales domésticos (de explotaciones ganaderas, granjas o similares) "
+        },
+        "selected": false,
+        "identifier": "wildlife_collision",
+        "premium": {
+          "monthly_plan": null,
+          "annual_plan": {
+            "receipt_amount": 15.14,
+            "first_receipt_amount": null,
+            "annual_gross_premium": 15.14,
+            "annual_net_premium": 14.0,
+            "annual_taxes": 1.14,
+            "annual_discounted_gross_premium": null,
+            "annual_discounted_net_premium": null,
+            "annual_discounted_taxes": null
+          },
+          "biannual_plan": null,
+          "quarterly_plan": null
+        },
+        "order": 7
+      }
+    ],
+    "title": {
+      "en": "Third-party liability plus",
+      "es": "Terceros ampliado"
+    },
+    "description": {
+      "en": "The ideal protection for your peace of mind: in case of any unforeseen event with windows, a theft, or a fire, we guarantee you a new car.",
+      "es": "La protección ideal para tu tranquilidad: en caso de cualquier imprevisto en lunas, un robo o incendio, te aseguramos un coche nuevo."
+    }
+  }
+}

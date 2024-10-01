@@ -40,13 +40,20 @@ export class SecondStepComponent {
     this.coverageChangeSubject.asObservable(),
   ]).pipe(
     scan((acc: CoverageType[], [coverageTypes, coverageChange]) => {
-      //acc es la ultima foto del array, sumarli el canvi acc + el canvi
-
       const updatedCoverageTypes = acc.map((coverageType) => {
         if (coverageChange === null) {
           return coverageType;
         }
+        const selectedCoverages = acc.filter((ct) => ct.selected).length;
+
         if (coverageType.identifier === coverageChange.identifier) {
+          if (coverageChange.selected === false && selectedCoverages === 1) {
+            alert('Debes seleccionar al menos una cobertura');
+            return {
+              ...coverageType,
+              selected: true,
+            };
+          }
           return {
             ...coverageType,
             selected: coverageChange.selected,
