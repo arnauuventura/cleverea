@@ -1,0 +1,25 @@
+<div class="page-container">
+      <div class = "coverageSection"> 
+        <h6> Coberturas incluidas en tu póliza</h6>
+         <hr class="green-line">
+         <div *ngFor="let coverage of (coverageTypeList$|async) || []"> 
+          <p></p>
+            <app-card-component 
+              [coverageType]="coverage"
+              (coverageChange)="toggleCoverage($event)">
+            </app-card-component>
+          
+        </div> 
+      </div>
+       
+    <!-- Pasar dades al component Summary -->
+
+    <div class ="sum">
+      <app-summary 
+      [formData]="formData$|async" 
+      [coverageTypes]="(coverageTypeList$|async)|| [] " 
+      [totalPrice]="totalPrice$|async">
+      </app-summary>
+    </div>
+</div>
+  

@@ -59,3 +59,9 @@
     background-color: #009e82;
   }
   
+  /* src/app/checkout/steps/form/formulario-propietario/formulario-propietario.component.css */
+.error-message {
+  color: red;
+  font-size: 0.875em;
+  margin-top: 0.25em;
+}

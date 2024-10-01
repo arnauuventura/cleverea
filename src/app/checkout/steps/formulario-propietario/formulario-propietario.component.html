@@ -1,0 +1,30 @@
+<div class="form-container"> 
+  <h3>Propietario/a del vehículo</h3>
+  
+  <form [formGroup]="propietarioForm">
+    <div class="input-group">
+      <input type="text" placeholder="Nombre" class="input-field" formControlName="nombre">
+      <div *ngIf="propietarioForm.get('nombre')?.invalid && propietarioForm.get('nombre')?.touched" class="error-message">
+        El nombre es requerido.
+      </div>
+      <input type="text" placeholder="Apellidos" class="input-field" formControlName="apellidos">
+      <div *ngIf="propietarioForm.get('apellidos')?.invalid && propietarioForm.get('apellidos')?.touched" class="error-message">
+        Los apellidos son requeridos.
+      </div>
+    </div>
+    <div class="input-group">
+      <input type="text" placeholder="DNI/NIE" class="input-field" formControlName="dniNie">
+      <div *ngIf="propietarioForm.get('dniNie')?.invalid && propietarioForm.get('dniNie')?.touched" class="error-message">
+        El DNI/NIE es requerido.
+      </div>
+    </div>
+    
+    <p class="privacy-text">
+      Al hacer clic en Siguiente confirmas que has leído y aceptas la
+      <a href="#" target="_blank">Política de Privacidad</a> y los 
+      <a href="#" target="_blank">Términos y Condiciones</a> que contienen información sobre el tratamiento de tus datos personales.
+    </p>
+    
+    <button type="submit" class="submit-button" (click)="navigateToSecondComponent()">Siguiente</button>
+  </form>
+</div>

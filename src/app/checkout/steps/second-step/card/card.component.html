@@ -1,0 +1,17 @@
+<div class="card-container">
+  <div class="card">
+    <div class="card-header">
+      <h6>{{ coverageType.title.es }}</h6>
+      <p>{{ (coverageType.premium.annual_plan.receipt_amount / 12).toFixed(2) }} €/mes</p>
+    </div>
+    <div class="card-body">
+      <p>{{ coverageType.description.es }}</p>
+      <mat-slide-toggle class="slide-toggle"[checked]="coverageType.selected" (change)="toggleCoverage(coverageType)">
+      </mat-slide-toggle>
+    </div>
+  </div>
+</div>
+
+
+
+ 

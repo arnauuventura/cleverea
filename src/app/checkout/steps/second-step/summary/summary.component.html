@@ -1,0 +1,39 @@
+<div class="form-container">
+  <div class="price-summary">
+    <h5 class="price-title">Precio final</h5>
+    <div class="price-container">
+        <span class="price-big">{{ (totalPrice / 12).toFixed(2) }}</span>
+        <span class="price-euros">€/mes</span>
+    </div>
+    <p class="price-details">Cobrado anualmente<br>Impuestos incl.</p>
+</div>
+
+
+  <p><strong>Propietario</strong></p>
+  <div class = "resum1"> 
+    <p><strong> {{ formData?.nombre }} {{ formData?.apellidos }}</strong> </p>
+    <p>DNI/NIE:{{ formData?.dniNie }}</p>
+  </div>
+    
+  
+    <p></p>
+    <p><strong>Coberturas incluidas</strong></p>
+    <div class = "resum1" > 
+      <ng-container *ngFor="let coverage of coverageTypes">
+        <div *ngIf="coverage.selected">
+          <p>{{ coverage.title.es }} <strong>{{ (coverage.premium.annual_plan.receipt_amount / 12).toFixed(2) }} €/mes</strong></p>
+        </div>
+      </ng-container>
+    </div>
+    <p></p>
+    
+    <div class = "resum1" > 
+      <div class="summary">
+        <p><strong>Total</strong>  (Impuestos incluidos)* <span class="price" >{{ totalPrice/12 }} €/mes </span></p> 
+        <p><strong> Total anual </strong>(Impuestos incluidos)* <span class="price" > {{ totalPrice }} €/año</span></p>
+        </div>
+    </div>
+   
+</div>
+  
+  
