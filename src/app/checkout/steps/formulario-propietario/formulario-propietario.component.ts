@@ -7,7 +7,6 @@ import { DataService } from '../../data/data.service';
 import { CommonModule } from '@angular/common';
 import { filter, Observable } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-//import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-formulario-propietario',
@@ -28,17 +27,21 @@ export class FormularioPropietarioComponent {
     this.formData$ = this.dataService.getFormData().pipe(
       filter((data) => !!data),
       takeUntilDestroyed()
-    ); //No emet valor si no el té
+    );
     this.propietarioForm = this.fb.group({
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
-      dniNie: ['', Validators.required],
+      dniNie: ['', Validators.minLength(9)],
     });
   }
 
   navigateToSecondComponent() {
     if (this.propietarioForm.valid) {
-      this.dataService.setFormData(this.propietarioForm.value);
+      //const propietarioForm = { isComplete: true };
+      this.dataService.setFormData({
+        ...this.propietarioForm.value,
+        isComplete: true,
+      });
       this.router.navigate(['/second-step']);
     } else {
       this.propietarioForm.markAllAsTouched();
@@ -47,11 +50,6 @@ export class FormularioPropietarioComponent {
   }
 
   ngOnInit() {
-    //const savedData = this.dataService.getFormData();
     this.formData$.subscribe((data) => this.propietarioForm.patchValue(data));
   }
-  /*
-  onSubmit() {
-    console.log(this.propietarioForm.value);
-  } */
 }

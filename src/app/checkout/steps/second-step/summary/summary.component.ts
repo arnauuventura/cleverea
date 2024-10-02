@@ -7,12 +7,10 @@ import { CoverageType } from '../../../data/interface';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './summary.component.html',
-  styleUrls: ['./summary.component.css']
+  styleUrls: ['./summary.component.css'],
 })
 export class SummaryComponent {
   @Input() formData: any;
   @Input() coverageTypes: CoverageType[] = [];
   @Input() totalPrice: number = 0;
-  //@Input() selectedCoverage: { title: string, price: number } | null = null;
-
 }

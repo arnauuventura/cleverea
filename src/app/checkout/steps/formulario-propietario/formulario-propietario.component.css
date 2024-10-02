@@ -1,67 +1,72 @@
 /* Estilos del contenedor */
 .form-container {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 500px;
-    margin: auto;
-    background-color: #fff;
-  }
-  
-  /* Título */
-  h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #00bfa5;
-    padding-bottom: 5px;
-  }
-  
-  /* Estilos de los campos de entrada */
-  .input-group {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .input-field {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  /* Texto de privacidad */
-  .privacy-text {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .privacy-text a {
-    color: #00bfa5;
-    text-decoration: none;
-  }
-  
-  /* Botón de enviar */
-  .submit-button {
-    background-color: #00bfa5;
-    color: white;
-    border: none;
-    padding: 15px;
-    width: 100%;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #009e82;
-  }
-  
-  /* src/app/checkout/steps/form/formulario-propietario/formulario-propietario.component.css */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  background-color: #fff;
+}
+
+/* Título */
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #00bfa5;
+  padding-bottom: 5px;
+}
+
+/* Estilos de los campos de entrada */
+.input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Texto de privacidad */
+.privacy-text {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.privacy-text a {
+  color: #00bfa5;
+  text-decoration: none;
+}
+
+/* Botón de enviar */
+.submit-button {
+  background-color: #00bfa5;
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #009e82;
+}
+
 .error-message {
   color: red;
   font-size: 0.875em;
   margin-top: 0.25em;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
 }

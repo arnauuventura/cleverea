@@ -15,6 +15,9 @@ export class DataService {
       localStorage.getItem('formData') as string
     );
     this.formDataSubject = new ReplaySubject<any>(storedFormData || {});
+    if (storedFormData) {
+      this.formDataSubject.next(storedFormData);
+    }
   }
 
   getData() {
@@ -28,5 +31,10 @@ export class DataService {
 
   getFormData(): Observable<any> {
     return this.formDataSubject.asObservable();
+  }
+
+  isFormComplete(): boolean {
+    const formData = JSON.parse(localStorage.getItem('formData') as string);
+    return formData && formData.isComplete;
   }
 }
