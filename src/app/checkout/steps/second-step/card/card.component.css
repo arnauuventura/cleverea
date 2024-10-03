@@ -2,14 +2,13 @@
 .card-container {
   display: flex;
   flex-direction: row;
-  
-  width: 140%; /* Ancho de las tarjetas */
+
+  width: 100%; /* Ancho de las tarjetas */
   /* Para hacer que se puedan desplazar si hay muchas tarjetas */
 }
-.card-container > h2, .card-container > hr{
-  
+.card-container > h2,
+.card-container > hr {
   padding: 0;
-
 }
 
 /* Estilo de cada tarjeta */
@@ -42,18 +41,16 @@
 .summary {
   margin-top: 20px;
   padding: 20px;
-  border: 2px solid green; 
+  border: 2px solid green;
   border-radius: 40px;
   background-color: #f9f9f9;
 }
 
 .green-line {
-    border: 0;
-    border-top: 2px solid rgb(139, 226, 139); /* Borde superior verde */
-    margin: 20px 0; /* Espacio alrededor de la línea (opcional) */
+  border: 0;
+  border-top: 2px solid rgb(139, 226, 139); /* Borde superior verde */
+  margin: 20px 0; /* Espacio alrededor de la línea (opcional) */
 }
-
-
 
 /* Toggle switch styling */
 .toggle-switch {
@@ -101,3 +98,8 @@ input:checked + .slider:before {
   transform: translateX(24px);
 }
 
+@media (min-width: 400px) {
+  .card-container {
+    flex-direction: row;
+  }
+}

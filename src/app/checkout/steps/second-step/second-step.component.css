@@ -1,58 +1,92 @@
 /* Contenedor de la página que contiene las columnas */
 .page-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 .coverageSection {
-    
-    flex-direction: column;
-    justify-content: space-between;
-
-    padding: 20px;
-    width: 40%;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+  flex: 1;
+}
+.Titulo {
+  position: relative;
+  left: 40%;
 }
 
 .sum {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    width: 32%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  width: 32%;
 }
 
 /* Estilos para la columna de la información del propietario */
 .form-container {
-    flex: 0 0 30%; /* Ocupa el 30% del ancho de la página */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 0 0 30%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Resumen de precio en la sección del propietario */
 .price-summary {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .price {
-    color: green;
-    font-weight: bold;
+  color: green;
+  font-weight: bold;
 }
 
 /* Estilos para las tarjetas de coberturas */
 app-cards-component {
-    flex: 0 0 65%; /* Ocupa el 65% del ancho de la página */
+  flex: 0 0 65%;
 }
 
 .green-line {
-    border: 0;
-    border-top: 2px solid rgb(139, 226, 139); /* Borde superior verde */
-    margin: 20px 0; /* Espacio alrededor de la línea (opcional) */
+  border: 0;
+  border-top: 2px solid rgb(139, 226, 139);
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 400px) {
+  .page-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .coverageSection {
+    width: 100%;
+  }
+
+  .sum {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container.expanded {
+    display: block;
+  }
+
+  .form-container.collapsed {
+    display: none;
+  }
 }

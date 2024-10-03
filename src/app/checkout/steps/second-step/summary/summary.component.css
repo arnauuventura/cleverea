@@ -1,61 +1,106 @@
 .form-container {
-    flex: 0 0 30%; 
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #ede9e9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: auto;
+  flex: 0 0 30%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fffcfc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .resum1 {
-    flex: 0 0 30%; 
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: auto;
+  flex: 0 0 30%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
 }
 
-
 .price-summary {
-    margin-top: 20px;
-    text-align: left; 
-    font-family: Arial, sans-serif;
+  margin-top: 20px;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .price-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #2C3E50; 
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
 }
 
 .price-container {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .price-big {
-    font-size: 48px; 
-    font-weight: 700;
-    color: #191b1d;
+  font-size: 48px;
+  font-weight: 700;
+  color: #191b1d;
 }
 
 .price-euros {
-    font-size: 18px;
-    margin-left: 5px; 
-    color: #2C3E50;
+  font-size: 18px;
+  margin-left: 5px;
+  color: #2c3e50;
 }
 
 .price-details {
-    font-size: 12px;
-    color: #5A6A75; 
-    line-height: 1; 
-    margin-top: 5px;
+  font-size: 12px;
+  color: #5a6a75;
+  line-height: 1;
+  margin-top: 5px;
 }
 
-
 .price {
-    color: green;
-    font-weight: bold;
+  color: green;
+  font-weight: bold;
+}
+
+.price-summary.expanded {
+  cursor: default;
+}
+
+.form-container.expanded {
+  display: block;
+}
+
+.form-container.collapsed {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .form-container {
+    position: static;
+    box-shadow: none;
+    border-top: none;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .price-summary {
+    cursor: default;
+  }
+
+  .form-container.expanded,
+  .form-container.collapsed {
+    display: block;
+  }
+
+  .price-summary {
+    cursor: pointer;
+  }
+
+  .price-summary.expanded {
+    position: static;
+    cursor: default;
+  }
 }

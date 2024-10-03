@@ -36,7 +36,8 @@ export class SecondStepComponent {
 
   coverageChangeSubject = new BehaviorSubject<CoverageChange | null>(null);
   coverageTypeList$ = combineLatest([
-    this.coverageTypes$,
+    //combina coverageTypes$ que es un observable que emite una lista de tipos de cobertura
+    this.coverageTypes$, //con coverageChangeSubject que es un BehaviorSubject que emite un cambio en la cobertura
     this.coverageChangeSubject.asObservable(),
   ]).pipe(
     scan((acc: CoverageType[], [coverageTypes, coverageChange]) => {
